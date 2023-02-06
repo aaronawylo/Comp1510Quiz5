@@ -4,7 +4,7 @@ def calculate_pay(hours, wage):
     if hours > 40:
         base_wages = hours * wage
         overtime = (hours - 40) * (2 * wage)
-        wages = base_wages + overtime
+        total_wages = base_wages + overtime
     else:
-        wages = hours * wage
-    return wages
+        total_wages = hours * wage
+    return total_wages
