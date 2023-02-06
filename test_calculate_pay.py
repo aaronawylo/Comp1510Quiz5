@@ -23,6 +23,12 @@ class Test(TestCase):
     def test_zero_both(self):
         self.assertEqual(0, calculate_pay(0, 0))
 
+    def test_float_wages(self):
+        self.assertEqual(210.0, calculate_pay(20, 10.50))
+
+    def test_float_hours(self):
+        self.assertEqual(205.0, calculate_pay(20.50, 10))
+
     def test_under_40_hours(self):
         self.assertEqual(200, calculate_pay(20, 10))
 
